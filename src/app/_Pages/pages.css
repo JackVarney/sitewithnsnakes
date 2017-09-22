@@ -1,0 +1,21 @@
+.page{
+    height: 85vh;
+    border-radius: 5px;
+}
+
+.home{
+    background-color: white;    
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.snakes{
+    background-color: #C9F76F;
+    box-shadow: 5px 5px 5px #679B00;
+    color: #85004B;
+}
+
+.apples{ 
+    background-color: #FF7373;
+    box-shadow: 5px 5px 5px #A60000;
+    color: white;
+}

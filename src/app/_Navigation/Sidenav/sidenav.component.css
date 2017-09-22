@@ -1,0 +1,22 @@
+.sidenav-container{    
+    width: 100vw;
+    border-right: 2px solid black;   
+    position: sticky; 
+    z-index: 9; 
+    background-color: whitesmoke;
+}
+
+.sidenav{
+    box-shadow: 1px 1px 500px, grey;
+    width: 15vw;
+    min-width: 150px;
+}
+
+.add-button{
+      top: 20px;
+      left: 20px;
+}
+
+.height{
+    height: 93.5vh;
+}
