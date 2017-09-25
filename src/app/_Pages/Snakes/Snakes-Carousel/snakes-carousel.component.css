@@ -1,0 +1,12 @@
+.image{
+    width: 83%;
+}
+
+.parent{
+    text-align: center;
+    background-color: greenyellow;
+}
+
+.child{
+    margin:auto;
+}

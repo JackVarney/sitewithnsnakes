@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 
-  <div class="col-md-8 ml-md-auto" style="padding-left: 5%">
+  <div class="col-md-8 ml-md-auto" style="padding-left: 10%">
     <ul class="navbar-nav mr-auto">
       <div *ngFor="let info of pageInfo; let i=index" (click)="getIndex(i)">
         <li class="nav-item active">
@@ -16,10 +16,12 @@
   </div>
 
   <div lass="col-auto">
-    <button class="btn btn-outline-success">
-        <a style="color: green" href="http://pad2.whstatic.com/images/c/c8/User-Completed-Image-Hold-a-Snake-2016.02.22-01.00.38.0.jpg">Snake
+    <div class="snake-button-backdrop" (mouseover)="onHover($event)">
+      <button class="snake-button">
+        <a href="http://pad2.whstatic.com/images/c/c8/User-Completed-Image-Hold-a-Snake-2016.02.22-01.00.38.0.jpg">Snake
         </a>
     </button>
+    </div>
   </div>
 
 </nav>

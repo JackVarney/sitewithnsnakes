@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 
@@ -11,6 +12,8 @@ import { appRouter } from './app.router';
 
 import { GetIndexService } from './_navigation/get-index.service';
 
+import { AppServiceModule } from './app-service.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,13 +22,19 @@ import { GetIndexService } from './_navigation/get-index.service';
     BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
+    NgbModule.forRoot(
+
+    ),
 
     HeaderModule,
     SidenavModule,
-
-    appRouter
+    appRouter,
+    AppServiceModule
   ],
-  providers: [ GetIndexService ],
-  bootstrap: [AppComponent]
+  providers: [
+    GetIndexService
+  ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

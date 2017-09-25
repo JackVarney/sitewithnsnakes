@@ -1,0 +1,11 @@
+<div class="parent">
+  <ngb-carousel class="child">
+    <ng-template ngbSlide *ngFor="let snake of snakes">
+      <img class="image" src="{{snake.img}}" alt="Random first slide">
+      <div class="carousel-caption">
+        <h3>{{snake.header}}</h3>
+        <p>{{snake.subtitle}}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

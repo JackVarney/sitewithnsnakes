@@ -20,3 +20,19 @@ nav{
 .pad-left{
     padding-left: 35vw;
 }
+
+.snake-button{
+    background-color: greenyellow;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px; 
+}
+
+.snake-button-backdrop{
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px; 
+}
