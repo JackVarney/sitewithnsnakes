@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
         this._GetIndexService.currentIndex.subscribe(x => this.index = x);
         this.index = 1;
+        this._GetIndexService.changeIndex(this.index);
         console.log('home: ' + this.index);
     }
 }

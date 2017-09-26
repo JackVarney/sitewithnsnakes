@@ -17,6 +17,7 @@ export class SnakesComponent implements OnInit {
     ngOnInit() {
         this._GetIndexService.currentIndex.subscribe(x => this.index = x);
         this.index = 2;
+        this._GetIndexService.changeIndex(this.index);
         console.log('snakes: ' + this.index);
     }
 }
