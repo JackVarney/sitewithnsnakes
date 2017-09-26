@@ -10,10 +10,6 @@ import { HeaderModule } from './_navigation/header/header.module';
 import { SidenavModule } from './_navigation/sidenav/sidenav.module';
 import { appRouter } from './app.router';
 
-import { GetIndexService } from './_navigation/get-index.service';
-
-import { AppServiceModule } from './app-service.module';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -29,11 +25,7 @@ import { AppServiceModule } from './app-service.module';
 
     HeaderModule,
     SidenavModule,
-    appRouter,
-    AppServiceModule
-  ],
-  providers: [
-    GetIndexService
+    appRouter
   ],
   bootstrap: [ AppComponent ]
 })

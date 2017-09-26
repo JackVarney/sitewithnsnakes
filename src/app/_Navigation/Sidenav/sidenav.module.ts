@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdSidenavModule, MdIconModule, MdButtonModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
-
 import { SidenavComponent } from './sidenav.component';
 import { GetColourService } from './sidenav-get-colour.service';
+
+import { GetIndexModule } from '../../services/get-index/get-index-service.module';
 
 @NgModule({
     declarations: [ SidenavComponent ],
@@ -13,7 +14,9 @@ import { GetColourService } from './sidenav-get-colour.service';
         MdSidenavModule,
         MdIconModule,
         MdButtonModule,
-        RouterModule
+        RouterModule,
+
+        GetIndexModule
     ],
     exports: [ SidenavComponent ],
     providers: [ GetColourService ]

@@ -1,19 +1,20 @@
-import { Component, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 
 import { GetColourService } from './sidenav-get-colour.service';
-import { GetIndexService } from '../get-index.service';
+import { GetIndexService } from '../../services/get-index/get-index.service';
 
 @Component({
     selector: 'app-sidenav',
-    templateUrl: 'sidenav.component.html' ,
-    styleUrls: ['sidenav.component.css'] ,
+    templateUrl: 'sidenav.component.html',
+    styleUrls: ['sidenav.component.css'],
     encapsulation: ViewEncapsulation.None
 })
 
 export class SidenavComponent implements OnInit {
 
     index: number;
-    constructor (
+
+    constructor(
         private _GetColourService: GetColourService,
         private _GetIndexService: GetIndexService
     ) { }
@@ -23,6 +24,7 @@ export class SidenavComponent implements OnInit {
     }
 
     getColour() {
+        console.log('sidenav: ' + this.index);
         return this._GetColourService.getColourService(this.index);
     }
 }

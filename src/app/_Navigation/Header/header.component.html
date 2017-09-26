@@ -2,7 +2,7 @@
 
   <div class="col-md-8 ml-md-auto" style="padding-left: 10%">
     <ul class="navbar-nav mr-auto">
-      <div *ngFor="let info of pageInfo; let i=index" (click)="getIndex(i)">
+      <div *ngFor="let info of pageInfo; let i=index">
         <li class="nav-item active">
           <a routerLink="{{info.path}}" routerLinkActive="active" class="navbar-brand a">
             <img class="img" width="35" height="35" src="{{info.img}}"
@@ -16,12 +16,10 @@
   </div>
 
   <div lass="col-auto">
-    <div class="snake-button-backdrop" (mouseover)="onHover($event)">
-      <button class="snake-button">
+    <button class="btn btn-danger">
         <a href="http://pad2.whstatic.com/images/c/c8/User-Completed-Image-Hold-a-Snake-2016.02.22-01.00.38.0.jpg">Snake
         </a>
     </button>
-    </div>
   </div>
 
 </nav>

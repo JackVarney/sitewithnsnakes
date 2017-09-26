@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-
 import { SnakesComponent } from './snakes.component';
 import { snakesRouter } from './snakes.router';
-
+import { GetIndexModule } from '../../services/get-index/get-index-service.module';
 import { SnakesCarouselModule } from './snakes-carousel/snakes-carousel.module';
 
 @NgModule({
@@ -11,7 +10,7 @@ import { SnakesCarouselModule } from './snakes-carousel/snakes-carousel.module';
     ],
     imports: [
         snakesRouter,
-
+        GetIndexModule,
         SnakesCarouselModule
     ],
     exports: []
