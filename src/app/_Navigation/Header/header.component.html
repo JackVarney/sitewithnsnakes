@@ -3,8 +3,8 @@
   <div class="col-md-8 ml-md-auto" style="padding-left: 10%">
     <ul class="navbar-nav mr-auto">
       <div *ngFor="let info of pageInfo; let i=index">
-        <li class="nav-item active">
-          <a routerLink="{{info.path}}" routerLinkActive="active" class="navbar-brand a">
+        <li class="nav-item active" >
+          <a routerLink="{{info.path}}" routerLinkActive="active" class="navbar-brand a" (click)="getIndex(i)">
             <img class="img" width="35" height="35" src="{{info.img}}"
             alt="">
             <span style="display:inline-block; width: 5px;"></span>

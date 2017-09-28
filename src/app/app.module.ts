@@ -25,7 +25,7 @@ import { appRouter } from './app.router';
 
     HeaderModule,
     SidenavModule,
-    appRouter
+    appRouter,
   ],
   bootstrap: [ AppComponent ]
 })
