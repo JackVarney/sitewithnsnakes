@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { PAGEINFO } from './header-info';
 import { GetIndexService } from '../../services/get-index/get-index.service';
