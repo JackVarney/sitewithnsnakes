@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { PAGEINFO } from './header-info';
 import { GetIndexService } from '../../services/get-index/get-index.service';
@@ -9,18 +9,12 @@ import { GetIndexService } from '../../services/get-index/get-index.service';
     styleUrls: ['header.component.css']
 })
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
     index: number;
     pageInfo = PAGEINFO;
 
     constructor (private _GetIndexService: GetIndexService ) { }
-
-    ngOnInit() {
-        console.log('header oninit: ' + this.index);
-        this._GetIndexService.currentIndex.subscribe(x => this.index = x);
-        console.log('header after oninit: ' + this.index);
-    }
 
     getIndex(i) {
         this.index = i + 1;

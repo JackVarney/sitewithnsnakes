@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { GetColourService } from './sidenav-get-colour.service';
 import { GetIndexService } from '../../services/get-index/get-index.service';
@@ -6,8 +6,7 @@ import { GetIndexService } from '../../services/get-index/get-index.service';
 @Component({
     selector: 'app-sidenav',
     templateUrl: 'sidenav.component.html',
-    styleUrls: ['sidenav.component.css'],
-    encapsulation: ViewEncapsulation.None
+    styleUrls: ['sidenav.component.css']
 })
 
 export class SidenavComponent implements OnInit {
@@ -21,6 +20,7 @@ export class SidenavComponent implements OnInit {
 
     ngOnInit() {
         this._GetIndexService.currentIndex.subscribe(x => this.index = x);
+        console.log('sidenav init             init                init');
     }
 
     getColour() {

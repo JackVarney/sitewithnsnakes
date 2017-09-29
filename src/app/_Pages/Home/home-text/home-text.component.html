@@ -1,3 +1,4 @@
 <md-input-container class="container-fluid input">
-    <textarea mdInput type="text" rows="10" placeholder="Type Stuff Here!" [(NgModel)]="characters"></textarea>
+    <textarea mdInput type="text" rows="10" placeholder="Type Stuff Here!" 
+            [(ngModel)]="characters" (keyup)="getCharLength()"></textarea>
 </md-input-container>  

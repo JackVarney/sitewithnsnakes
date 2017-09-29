@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { GetIndexService } from '../../services/get-index/get-index.service';
 
 @Component({
@@ -7,23 +7,13 @@ import { GetIndexService } from '../../services/get-index/get-index.service';
     styleUrls: ['../pages.css']
 })
 
-export class SnakesComponent implements OnInit, AfterViewInit {
+export class SnakesComponent implements AfterViewInit {
 
-    index: number;
-
-    constructor (private _GetIndexService: GetIndexService ) { }
-
-    ngOnInit() {
-    }
+    constructor ( private _GetIndexService: GetIndexService ) { }
 
     ngAfterViewInit() {
-        console.log('snakes oninit: ' + this.index );
-        this._GetIndexService.currentIndex.subscribe(x => this.index = x);
-        console.log('snakes after subscribed: ' + this.index);
-        this.index = 2;
-        console.log('snakes after index given value: ' + this.index);
-        this._GetIndexService.changeIndex(this.index);
-        console.log('snakes after indexchanged: ' + this.index );
+        this._GetIndexService.changeIndex(pageIndex);
     }
-
 }
+
+const pageIndex = 2;

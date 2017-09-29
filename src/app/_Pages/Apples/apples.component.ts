@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import { GetIndexService } from '../../services/get-index/get-index.service';
 
 @Component({
     selector: 'app-apples',
@@ -6,4 +7,13 @@ import { Component } from '@angular/core';
     styleUrls: ['../pages.css']
 })
 
-export class ApplesComponent { }
+export class ApplesComponent implements AfterViewInit {
+
+    constructor ( private _GetIndexService: GetIndexService ) { }
+
+    ngAfterViewInit() {
+        this._GetIndexService.changeIndex(pageIndex);
+    }
+}
+
+const pageIndex = 3;

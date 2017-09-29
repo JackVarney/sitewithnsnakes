@@ -1,0 +1,15 @@
+<div class="padding">
+  <button class="btn btn-dark container-fluid" (click)="open(content)">This button tho</button>
+</div>
+
+<ng-template #content let-c="close">
+  <div class="modal-header">
+    <h4 class="modal-title">Congratulations!!!</h4>    
+  </div>
+  <div class="modal-body">
+    <p>You just typed a bunch of stuff for no reason!</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>

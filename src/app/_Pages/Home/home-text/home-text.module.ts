@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
-
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
-
 import { MdInputModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+
+// Components
 import { HomeTextComponent } from './home-text.component';
+
+// Services
 import { ProgBarServiceModule } from '../services/prog-bar.module';
+import { ModalButtonStateServiceModule } from '../services/modal-button-state-service.module';
 
 @NgModule({
     declarations: [
         HomeTextComponent
     ],
     imports: [
+        FormsModule,
+
         MdInputModule,
         ProgBarServiceModule,
-
-        FormsModule,
-        ReactiveFormsModule,
-        CommonModule,
-        BrowserModule
+        ModalButtonStateServiceModule
     ],
     exports: [
         HomeTextComponent

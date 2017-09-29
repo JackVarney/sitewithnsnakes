@@ -1,5 +1,4 @@
-
-
+// tslint:disable:max-line-length
 import { Component } from '@angular/core';
 
 @Component({
@@ -28,7 +27,6 @@ const SNAKES: SnakeInfo [] = [
     {
         img: 'https://images5.alphacoders.com/391/thumb-1920-391746.jpg',
         header: 'This is a swimming snake',
-        // tslint:disable-next-line:max-line-length
         subtitle: 'In the wild snakes will pretend their tongues are legs and walk them along the water, this has never been observed in captivity'
     }
 ];
